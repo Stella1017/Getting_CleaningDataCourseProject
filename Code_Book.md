@@ -1,7 +1,7 @@
 # Code Book for Assignment of Getting and Cleaning Data Course Project
 Stella Li
 June 10, 2017
-======================================================================
+
 Part 1. Code Book
 =================
 
