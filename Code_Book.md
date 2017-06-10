@@ -1,17 +1,17 @@
-======================================================================
+========================================
 Code Book for Assignment of Getting and Cleaning Data Course Project
 Stella Li
 June 10, 2017
 ======================================================================
 Part 1. Code Book
+=================
 
 The data of this assignment is from the research, \'93human activity recognition using smartphones dataset\'94, by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Onto from Smartlab.
 
 Download like for the dataset:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The dataset includes the following files:
-=========================================
+### The dataset includes the following files:
 - 'README.txt'
 
 - 'features_info.txt': Shows information about the variables used on the feature vector.
@@ -38,51 +38,49 @@ The following files are available for the train and test data. Their description
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
-Notes: 
-======
+##### Notes: 
+
 - Features are normalized and bounded within [-1,1].
-- Each feature vector is a row on the text file.\
+- Each feature vector is a row on the text file.
 
 According to their research description, the experiments "have been carried out with a group of 30 volunteers with an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist."
 
 There are two types of sensor signals: accelerometer and gyroscope. Signals were pre-processed and sampled at 128 readings/window. The raw time domain signals were collected and processed to derive body and gravity acceleration signals, Jerk signals, their magnitude, and frequency domain signals.
 
-In the processed datasets, for each record it is provided a list of variables:
-=======================================
+### In the processed datasets, for each record it is provided a list of variables:
 1. "Activity": one of the six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
 2. "Subject": An identifier of the subject who carried out the experiment. Its range is from 1 to 30.
 3. 66 feature variables from the accelerometer and gyroscope (see below):
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-timeBodyAccelaration-XYZ
-timeGravityAccelaration-XYZ
-timeBodyAccelarationJerk-XYZ
-timeBodyAngularVelocity-XYZ
-timeBodyAngularVelocityJerk-XYZ
-timeBodyAccelarationMagnitude
-timeGravityAccelarationMagnitude
-timeBodyAccelarationJerkMagnitude
-timeBodyAngularVelocityMagnitude
-timeBodyAngularVelocityJerkMagnitude
-frequencyBodyAccelaration-XYZ
-frequencyBodyAccelarationJerk-XYZ
-frequencyBodyAngularVelocity-XYZ
-frequencyBodyAccelarationMagnitude
-frequencyBodyBodyAccelarationJerkMagnitude
-frequencyBodyBodyAngularVelocityMagnitude
-frequencyBodyBodyAngularVelocityJerkMagnitude
+- timeBodyAccelaration-XYZ
+- timeGravityAccelaration-XYZ
+- timeBodyAccelarationJerk-XYZ
+- timeBodyAngularVelocity-XYZ
+- timeBodyAngularVelocityJerk-XYZ
+- timeBodyAccelarationMagnitude
+- timeGravityAccelarationMagnitude
+- timeBodyAccelarationJerkMagnitude
+- timeBodyAngularVelocityMagnitude
+- timeBodyAngularVelocityJerkMagnitude
+- frequencyBodyAccelaration-XYZ
+- frequencyBodyAccelarationJerk-XYZ
+- frequencyBodyAngularVelocity-XYZ
+- frequencyBodyAccelarationMagnitude
+- frequencyBodyBodyAccelarationJerkMagnitude
+- frequencyBodyBodyAngularVelocityMagnitude
+- frequencyBodyBodyAngularVelocityJerkMagnitude
 
 There are also some variables were estimated from these signals. In the tidy datasets (task4_finaldata and task5_tidydata), only two sets were kept:
 - mean(): Mean value
 - std(): Standard deviation
 
-There are two datasets for this assignment:
-======================================\
+### There are two datasets for this assignment:
 "task4_finaldata.txt": Processed dataset as described by project requirements with descriptive lables.
-"task5_tidydata.txt" : A dataset generated from \'91task4_finaldata.txt\'92 with the average of each variable for each activity and each subject. 
+"task5_tidydata.txt" : A dataset generated from 'task4_finaldata.txt' with the average of each variable for each activity and each subject. 
 
-==========================================================================
 Part 2. Instruction List
+========================
 Task 1. Merges the training and the test sets to create one data set
 
 - Step 1.1 Load files into R
